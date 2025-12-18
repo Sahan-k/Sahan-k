@@ -1,0 +1,32 @@
+cart =[]
+while(True):
+    print("1.Add item to cart")
+    print("2.Remove item from cart")
+    print("3.View total price")
+    print("4.Exit")
+    
+    choice =int(input("Enter your choice: ""\n"))
+    if choice== 1:
+        name=input("Enter the name of the item :""\n")
+        price=int(input("Enter the price: ""\n"))
+        cart.append([name,price])
+    elif choice ==2:
+        name=input("Enter item name :")
+        for x in cart:
+           if x[0]== name:
+               cart.remove(x)
+               print(f"{name} removed from the cart""\n")
+               break
+        else:
+               print("item not found""\n")
+    elif choice ==3:
+        if not cart:
+            print("Cart is empty")
+        else:
+           total=sum(x[1] for x in cart)
+           print(" Total price :",total)
+    elif choice ==4:
+        print("Thank you for visiting")
+        break
+    else:
+        print("Invalid choice""\n")
