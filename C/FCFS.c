@@ -1,4 +1,6 @@
-// The program is for First come forst serve scheduling and also calculate TAT,ATAT,WT,AWT.
+// This program implements  First Come First Serve (FCFS) CPU Scheduling
+// and calculate Waiting Time (WT), Turn around time (TAT),
+// Average Waiting Time(AWT), and Average Turn Around Time (ATAT)
 #include<stdio.h>
 int main()
 {
@@ -22,11 +24,12 @@ int main()
      TAT+=total;                    // TAT variable used to store the TAT
    }
    
-   printf("Total TAT is %.2f\n",TAT);      //prints the TAT with a 2 decimal part
+   printf("Total Turn Tround Time is %.2f\n",TAT);      //prints the TAT with a 2 decimal part
    ATAT=TAT/n;                             // Calculate Average turn around time
-   printf("Average TAT is %.2fms\n",ATAT);  // Prints the value of TAT
-   printf("Waiting time is %.2f\n",WT);      //Prints the WT with 2 decimal part
+   printf("Average Turn Around Time  is %.2fms\n",ATAT);  // Prints the value of TAT
+   printf("Waiting Time is %.2f\n",WT);      //Prints the WT with 2 decimal part
    AWT=WT/n;                                // Caclulate average Waiting time 
-   printf("Avereage WT is %.2f\n",AWT);     //Prints Average Waiting time with 2 decimal part
+   printf("Avereage Waitinf Time is %.2f\n",AWT);     //Prints Average Waiting time with 2 decimal part
 }
+
 
